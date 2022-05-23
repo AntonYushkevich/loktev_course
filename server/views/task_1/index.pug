@@ -1,0 +1,27 @@
+doctype
+html
+    head
+        title Task 1
+    body
+        a(href='/') Go back
+
+        form(method='get', action='/task_1', style='margin-top: 20px')
+            div(style='display:flex, flex-direction:row')
+                label(for='username', style='margin-right: 10px') Username
+                input(value=data.username, name='username')#username
+            p=error.username
+
+            div(style='display:flex, flex-direction:row')
+                label(for='fullName', style='margin-right: 10px') Full name
+                input(value=data.fullName, name='fullName')#fullName
+            p=error.fullName
+
+            button(type='submit', style='margin-top: 20px') Submit form
+
+        dl
+            dt='Completed username'
+            dd
+                b=completed.username
+            dt='Completed full name'
+            dd
+                b=completed.fullName
