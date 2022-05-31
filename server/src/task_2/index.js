@@ -40,7 +40,11 @@ router.post('/vote', async (req, res) => {
 
 router.get('/stat', (req, res) => {
     fsp.readFile(votesPath)
-        .then(file => res.json(JSON.parse(file)))
+        .then(file => {
+            res.setHeader('Cache-Control', 'max-age=0');
+            res.setHeader('Content-Type', 'application/json');
+            res.send(file);
+        })
 })
 
 module.exports = router;

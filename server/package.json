@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "run": "NODE_ENV=production babel-node -- index.js",
     "start": "NODE_ENV=development nodemon --exec babel-node -- index.js"
   },
   "author": "",

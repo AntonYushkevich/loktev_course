@@ -16,6 +16,7 @@ document.querySelector('#getVariants').onclick = async function (e) {
             inputEl.setAttribute('type', 'radio');
             inputEl.setAttribute('name', 'vote');
             inputEl.setAttribute('id', key);
+            inputEl.setAttribute('required', 'required');
             inputEl.value = key;
             const labelEl = document.createElement('label');
             labelEl.setAttribute('for', key);

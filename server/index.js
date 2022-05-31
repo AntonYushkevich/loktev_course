@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from "body-parser";
 import task1 from './src/task_1';
 import task2 from './src/task_2';
+import task3 from './src/task_3';
 
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
 
 app.use('/task_1', task1);
 app.use('/task_2', task2);
+app.use('/task_3', task3);
 
 app.listen(PORT, function () {
     console.log('server started at: ' + PORT)
